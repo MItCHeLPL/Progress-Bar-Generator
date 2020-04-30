@@ -1,0 +1,157 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    clear: both;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: #474747;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+
+/*Header*/
+header
+{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    z-index: 7;
+    text-align: center;
+    width: 99.5vw;
+    background-color: #212121;
+    margin: 0 auto;
+    border-bottom: solid .1em white;
+    border-right: solid .1em white;
+}
+
+h1
+{
+    width: 100%;
+    font-size: 4em;
+    margin: 1em;
+}
+
+
+.split /*Split divs*/
+{
+    display: flex;
+    justify-content: space-bsetween;
+}
+
+
+/*Form div*/
+.form
+{
+    position: fixed;
+    z-index: 10;
+    background-color: #212121;
+    left:0;
+    height: 100%;
+    padding-left: .5em;
+    padding-right: .5em;
+    top: 0;
+    padding-top:10%;
+    overflow: auto;
+    border-right: solid .1em white;
+    margin: 0 auto;
+}
+
+input, select
+{
+    text-align: center;
+    width: 3em;
+    font-size: .7em;
+    height: 2em;
+    margin-bottom: 2em;
+}
+
+select
+{
+    width: 4.5em;
+    text-align: center;
+}
+
+input[type="button"]
+{
+    background-color: white;
+    padding: 1em;
+    width: 10em;
+    height: 4em;
+}
+
+option
+{
+    height: 3em;
+    margin: 3em;
+    padding: 3em;
+}
+
+#customChars
+{
+    display: none;
+}
+
+.input_with_appended_unit input 
+{
+    padding-right: 25px;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button /*Make spin button always visible*/
+{
+    opacity: 1;
+}
+
+.input_with_appended_unit input::-webkit-inner-spin-button, 
+.input_with_appended_unit input::-webkit-outer-spin-button 
+{ 
+    position: relative;
+    right: -20px;
+    cursor: pointer;
+    height: 1.75em;
+}
+.input_with_appended_unit span /*% in progress*/
+{
+    text-align: center;
+    position: relative;
+    left: -55px;
+    font-size: .8em;
+    color: black;
+}
+
+#slider
+{
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/*Result div*/
+#result
+{
+    position: absolute;
+    right: 2em;
+    text-align: right;
+    z-index: 5;
+    width:80%;
+    margin-bottom: 10em;
+}
+
+#result span
+{
+    margin-bottom: 2em;
+    margin-right: 1em;
+    white-space:nowrap;
+    font-size: 2em;
+}
+
+/*1190px for mobile version*/
