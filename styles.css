@@ -42,7 +42,7 @@ h1
 .split /*Split divs*/
 {
     display: flex;
-    justify-content: space-bsetween;
+    justify-content: space-between;
 }
 
 
