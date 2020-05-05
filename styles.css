@@ -37,8 +37,23 @@ h1
     width: 100%;
     font-size: 3em;
     margin: 1em;
+    margin-left: 4em;
 }
 
+.blink
+{
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes blink {
+    0%   {opacity: 0;}
+    50%  {opacity: 0;}
+    51%  {opacity: 1;}
+    100% {opacity: 1;}
+  }
 
 .split /*Split divs*/
 {
