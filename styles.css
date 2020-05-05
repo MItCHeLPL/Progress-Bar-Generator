@@ -3,7 +3,8 @@ body
     margin: 0;
     padding: 0;
     clear: both;
-    font-family: 'Times New Roman', Times, serif;
+    /*font-family: 'Times New Roman', Times, serif;*/
+	font-family: "Lucida Console", Monaco, monospace; 
     color: white;
     background-color: #474747;
     text-align: center;
@@ -34,7 +35,7 @@ header
 h1
 {
     width: 100%;
-    font-size: 4em;
+    font-size: 3em;
     margin: 1em;
 }
 
