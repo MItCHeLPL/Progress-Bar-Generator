@@ -246,7 +246,7 @@ input::-webkit-outer-spin-button /*Make spin button always visible*/
     /*Header*/
     header
     {
-        position: fixed;
+        position: absolute;
         height: 6em;
         width: 100vw;
         border-right: none;
@@ -266,7 +266,7 @@ input::-webkit-outer-spin-button /*Make spin button always visible*/
     /*Form*/
     .formContainer
     {
-        position: fixed;
+        position: absolute;
         height: 25em;
         width: 100vw;
         border:none;
