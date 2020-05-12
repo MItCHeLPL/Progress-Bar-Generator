@@ -11,19 +11,6 @@
         <meta name="description" content='ASCII Progress Loading Bar Generator' />
         <meta name=”robots” content=”index” />
 
-        <!--Favicon-->
-        <!--<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
-        <link rel="manifest" href="icons/site.webmanifest" />
-        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#164c3f" />
-        <link rel="shortcut icon" href="icons/favicon.ico" />
-        <meta name="msapplication-config" content="icons/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#164c3f" />
-        <meta name="theme-color" content="#164c3f" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#164c3f">
-        <meta name="msapplication-navbutton-color" content="#164c3f">-->
-
         <title>ASCII Progress Bar Generator</title>
 
         <link rel="stylesheet" type="text/css" href="styles.css">
@@ -32,46 +19,48 @@
 
         <!--Header-->
         <header>
-            <h1>&gt;ASCII Progress Bar Generator<span class="blink">_</span></h1>
+           <h1>&gt;ASCII Progress Bar Generator<span class="blink">_</span></h1>
         </header>
 
         <div class="split">
 
             <!--Generator Form-->
-            <div class="form">
-                Type: 
-                <select id="type" onchange="callFunction(value)">
-                    <option value="hideElement('customChars')">⬛⬜</option>
-                    <option value="hideElement('customChars')">░█</option>
-                    <option value="hideElement('customChars')">▱▰</option>
-                    <option value="hideElement('customChars')">▭◼</option>
-                    <option value="hideElement('customChars')">▯▮</option>
-                    <option value="hideElement('customChars')">◯⬤</option>
-                    <option value="hideElement('customChars')">⚫⚪</option>
-                    <option value="hideElement('customChars')">█-</option>
-                    <option value="showElement('customChars')">Custom</option>
-                </select><br />
+            <div class="formContainer">
+                <div class="form">
+                    Type: 
+                    <select id="type" onchange="callFunction(value)">
+                        <option value="hideElement('customChars')">⬛⬜</option>
+                        <option value="hideElement('customChars')">░█</option>
+                        <option value="hideElement('customChars')">▱▰</option>
+                        <option value="hideElement('customChars')">▭◼</option>
+                        <option value="hideElement('customChars')">▯▮</option>
+                        <option value="hideElement('customChars')">◯⬤</option>
+                        <option value="hideElement('customChars')">⚫⚪</option>
+                        <option value="hideElement('customChars')">█-</option>
+                        <option value="showElement('customChars')">Custom</option>
+                    </select><br />
 
-                <span id="customChars">Custom Characters: <input type="text" id="customCharsInput" value="⬛⬜" minlength="2" maxlength="2"/></span><!--only visible when type is "custom"-->
+                    <span id="customChars">Custom Characters: <input type="text" id="customCharsInput" value="⬛⬜" minlength="2" maxlength="2"/></span><!--only visible when type is "custom"-->
 
-                Length: <input type="number" id="length" min="1" value="10" /><br /> 
+                    Length: <input type="number" id="length" min="1" value="10" /><br /> 
 
-                <div class="input_with_appended_unit">
-                    Progress: <input type="number" id="progress" min="0" max="100" value="50" />
-                    <span onclick="focusInput('progress')">%</span> <!--Input is focused even if you click at % character-->
-                </div>
+                    <div class="input_with_appended_unit">
+                        Progress: <input type="number" id="progress" min="0" max="100" value="50" />
+                        <span onclick="focusInput('progress')">%</span> <!--Input is focused even if you click at % character-->
+                    </div>
 
-                Invert: <input type="checkbox" id="invert" /><br />
+                    Invert: <input type="checkbox" id="invert" /><br />
 
-                <input type="button" value="Generate" onclick="startBar()" /><br />
+                    <input type="button" value="Generate" onclick="startBar()" /><br />
 
-                <div class="fontSizeSlider">
-                    Font Size:<br />
-                    <input type="range" id="slider" min="1" max="200" value="100" /><br/>
-                    <span id="sliderValue">100%</span>
+                    <div class="fontSizeSlider">
+                        Font Size:<br />
+                        <input type="range" id="slider" min="1" max="200" value="100" /><br/>
+                        <span id="sliderValue">100%</span>
+                    </div>
                 </div>
             </div>
-
+            
             <!--Generated bars go here-->
             <div id="result"></div> 
 

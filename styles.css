@@ -3,7 +3,6 @@ body
     margin: 0;
     padding: 0;
     clear: both;
-    /*font-family: 'Times New Roman', Times, serif;*/
 	font-family: "Lucida Console", Monaco, monospace; 
     color: white;
     background-color: #474747;
@@ -21,13 +20,14 @@ html
 header
 {
     display: flex;
-    position: relative;
+    align-items: center;
     justify-content: space-between;
+    position: fixed;
+    height: 6em;
+    width: 99.9vw;
     z-index: 7;
     text-align: center;
-    width: 99.5vw;
     background-color: #212121;
-    margin: 0 auto;
     border-bottom: solid .1em white;
     border-right: solid .1em white;
 }
@@ -35,9 +35,9 @@ header
 h1
 {
     width: 100%;
-    font-size: 3em;
+    font-size: 2em;
     margin: 1em;
-    margin-left: 4em;
+    margin-left: 6.5em;
 }
 
 .blink
@@ -47,13 +47,13 @@ h1
     animation-iteration-count: infinite;
 }
 
-
-@keyframes blink {
+@keyframes blink 
+{
     0%   {opacity: 0;}
     50%  {opacity: 0;}
     51%  {opacity: 1;}
     100% {opacity: 1;}
-  }
+}
 
 .split /*Split divs*/
 {
@@ -62,21 +62,28 @@ h1
 }
 
 
-/*Form div*/
-.form
+/*Form*/
+.formContainer
 {
     position: fixed;
-    z-index: 10;
-    background-color: #212121;
     left:0;
+    z-index: 9;
+    background-color: #212121;
     height: 100%;
     padding-left: .5em;
     padding-right: .5em;
     top: 0;
-    padding-top:10%;
-    overflow: auto;
     border-right: solid .1em white;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.5em;
+}
+
+.form
+{
+    z-index: 10;
 }
 
 input, select
@@ -114,12 +121,19 @@ option
     display: none;
 }
 
+input[type="checkbox"]
+{
+    position: relative;
+    top: 8px;
+}
+
 .input_with_appended_unit input 
 {
     padding-right: 25px;
     text-align: center;
     margin-right: 0;
     margin-left: 0;
+    margin-bottom: 0.75em;
 }
 
 input::-webkit-inner-spin-button,
@@ -154,12 +168,14 @@ input::-webkit-outer-spin-button /*Make spin button always visible*/
 /*Result div*/
 #result
 {
-    position: absolute;
-    right: 2em;
-    text-align: right;
-    z-index: 5;
-    width:80%;
+    margin-top: 6em;
+    margin-left: 14em;
+    margin-right: .5em;
     margin-bottom: 10em;
+    text-align: left;
+    z-index: 5;
+    width:100%;
+    
 }
 
 #result span
@@ -170,4 +186,129 @@ input::-webkit-outer-spin-button /*Make spin button always visible*/
     font-size: 2em;
 }
 
-/*1190px for mobile version*/
+
+@media only screen and (max-width: 1260px) 
+{
+    body
+    {
+        font-size: 1.2em;
+    }
+
+
+    h1
+    {
+        width: 100%;
+        font-size: 2em;
+        margin: 1em;
+        margin-left: 6em;
+    }
+
+
+    .formContainer
+    {
+        width: 10em;
+    }
+
+    .input_with_appended_unit input 
+    {
+        padding-right: 0;
+    }
+    .input_with_appended_unit input::-webkit-inner-spin-button, 
+    .input_with_appended_unit input::-webkit-outer-spin-button 
+    { 
+        right: 0;
+    }
+    .input_with_appended_unit span /*% in progress*/
+    {
+        display: none;
+    }
+
+
+    #result
+    {
+        margin-left: 12em;
+        margin-bottom: 7.5em;  
+    }
+
+    #result span
+    {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 860px) /*mobile*/
+{
+    body
+    {
+        font-size: 1em;
+    }
+
+    /*Header*/
+    header
+    {
+        position: fixed;
+        height: 6em;
+        width: 100vw;
+        border-right: none;
+        margin:0;
+        padding:0;
+        clear: both;
+        z-index: 10;
+    }
+
+    h1
+    {
+        font-size: 1.2em;
+        margin: .3em;
+    }
+
+
+    /*Form*/
+    .formContainer
+    {
+        position: fixed;
+        height: 25em;
+        width: 100vw;
+        border:none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:0;
+        padding: 0;
+        margin-top:6em;
+
+        border-bottom: solid .1em white;
+        z-index: 5;
+    }
+
+    .form
+    {
+        width: 55%;
+    }
+
+    input[type="checkbox"]
+    {
+        position: relative;
+        top: 5px;
+    }
+
+
+    /*Result div*/
+    #result
+    {
+        text-align: left;
+        width:100%;
+        margin:0;
+        margin-top: 32em;
+        padding-left: 1em;
+        z-index: 0;
+        margin-bottom: 5em;
+    }
+
+    #result span
+    {
+        margin: 0;
+        white-space:nowrap;
+        font-size: 1em;
+    }
+}
