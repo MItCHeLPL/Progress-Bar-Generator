@@ -187,6 +187,24 @@ input::-webkit-outer-spin-button /*Make spin button always visible*/
 }
 
 
+footer
+{
+    color: #9D9D9D;
+    font-size: .7em;
+    background-color: #474747;
+
+
+    position: fixed;
+    bottom: 0;
+    z-index: 6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: .7em;
+}
+
+
 @media only screen and (max-width: 1260px) 
 {
     body
