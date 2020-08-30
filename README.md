@@ -11,8 +11,7 @@
 50% ⚫⚫⚫⚫⚫⚪⚪⚪⚪⚪ 100%  
 50% █████----- 100%
 
-## Try it out
-https://mitchelpl.github.io/Simple-Noise-Generator/
+### [Try it out](https://mitchelpl.github.io/Simple-Noise-Generator/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
