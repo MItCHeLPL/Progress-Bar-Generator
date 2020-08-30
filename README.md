@@ -11,7 +11,7 @@
 50% ⚫⚫⚫⚫⚫⚪⚪⚪⚪⚪ 100%  
 50% █████----- 100%
 
-### [Try it out](https://mitchelpl.github.io/ProgressBar/)
+### [Try it out](https://mitchelpl.github.io/Progress-Bar-Generator/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
